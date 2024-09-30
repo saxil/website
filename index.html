@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Chilanka' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Borel' rel='stylesheet'>    <title>Website</title>
+<style>
+    body {
+    margin: 100px;
+    padding: 0;
+    font-family: 'Caveat', cursive;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+section {
+    padding: 100px;
+    /* padding-bottom: 100px; */
+    margin-bottom: 100px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: 11111100;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #11111100; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #11111100; 
+}
+/*Footer*/
+footer {
+  background-color: #111;
+  /* padding: 20px 0; */
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 10%;
+  z-index: 10;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 100px;
+}
+
+.social-links a i {
+    font-size: 17px;
+    color: #fff;
+}
+
+.social-links a i:hover {
+    color: #007bff;
+}
+/*Footer ends here*/
+.Home {
+    width: 100%;
+    height: auto; /* Change from a fixed height to auto */
+    display: flex;
+    flex-direction: row; /* Align children (image and details) horizontally */
+    align-items: center; /* Vertically center the content */
+    /* margin-top:50px; Increased margin for separation */
+    margin-bottom: 50px; /* Add this to create significant space below the home section */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 50%; /* Adjust size as needed */
+    height: auto;
+    display: flex;
+    border-radius: 25%; /* Circular image */
+    margin: 10px; /* Add space between the image and the details */
+    
+}
+
+.profile-details {
+    flex-direction: column; /* Stack details vertically */
+    align-items: flex-end; /* Align text and buttons to the left */
+    color: #ffffff;
+}
+
+.profile-details h1 {
+    font-family: 'Borel', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-details p {
+    font-size: 20px;
+    /* margin: 10px 0 20px; */
+    line-height: 1.5;
+    
+}
+
+
+.home-social {
+    margin-top: 15px; /* Add space between the resume button and social links */
+    display: flex;
+    gap: 10px;
+    /* top: 50%; */
+}
+
+.home-social a i:hover {
+    color: #007bff;
+}
+.home-social a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+.home-social a i {
+    font-size: 18px;
+}
+@media (max-width: 568px) {
+    .body{
+        font-size: 10px;
+        margin: 50px;
+    }
+    section {
+        padding: 50px; /* Adjust padding for smaller screens */
+    }
+    .Home {
+        flex-direction: row; /* Stack image and details vertically for smaller screens */
+        align-items: center; /* Center align for smaller screens */
+        font-size: 10px;
+        margin-bottom: 50px; /* Adjust margin for smaller screens */
+    }
+
+    .profile-details, .home-social, .resume-buttons {
+        align-items: center; /* Center elements on small screens */
+        .profile-picture img {
+            width: 100%; /* Adjust image size for smaller screens */
+            margin: 10px; /* Adjust margin for smaller screens */
+        }
+        h1{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    .card {
+        width:60%; /* Adjust to make card responsive */
+        body{
+            font-size: 10px;
+            width: 100%;
+        }
+        skill-name{
+            font-size: 10px;
+        }
+        skill-percent-number{
+            font-size: 10px;
+        }
+        skill-level{
+            width: 100%;
+        }
+    }
+
+    #skills {
+        margin-bottom: 50px; /* Adjust margin for smaller screens */
+    }
+    #Project{
+        cards_1{
+            flex-direction: column; /* Stack cards vertically for smaller screens */
+        }
+        margin-bottom: 50px;
+    }
+}
+.resume-buttons {
+    position: absolute;
+    top: 30%;
+    left:80%;
+    transform: translateY(-50%);
+    display: flex;
+    margin-top: 20px; /* Add space between details and the resume button */
+    gap: 10px;
+}
+.menu__link {
+  color: #ffffff ;
+  font-weight: bold;
+    font-size: 23px;
+  line-height: 2;
+  position: relative;
+  /* background-color: #007bff; */
+    padding: 10px 20px;
+    color: #ffffff;
+    /* font-weight: bold; */
+    border-radius: 5px;
+    text-decoration: none;
+    /* font-size: 1rem; */
+    /* line-height: 2; */
+
+}
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #706c6c;
+  position: absolute;
+  bottom: -.25rem;
+  right: 0;
+  transition: right .4s, width .4s, left .4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+/*Home Section Ends Here*/
+/*Skills section*/
+#skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 150px; Increased margin for separation */
+    margin-bottom: 50px;
+}
+.card {
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #333;
+}
+
+.card .title {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.card .body {
+    padding: 20px;
+}
+
+.card .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card .skill-name {
+    width: 120px;
+    font-size: 20px;
+}
+.python:hover {
+  color: blue;
+}
+
+.java:hover {
+  color: blue;
+}
+
+.sql:hover {
+  color: blue;
+}
+.mongo-db:hover{
+  color:blue;
+}
+.card .skill-level {
+    width: 160px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.card .skill-percent {
+    background-color: #333;
+    height: 100%;
+}
+
+.card .skill-percent-number {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+
+/*Skills section ends here*/
+/*Projects section*/
+#Project {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* margin-top: 100px; */
+                margin-bottom: 50px;
+            }
+.cards_1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+}
+
+.cards_1 .red {
+    background-image: url('https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=600');
+
+}
+
+.cards_1 .blue {
+   background-image: url('https://images.unsplash.com/photo-1567974775951-4a1759f26045?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+   background-size:100%;
+   /* filter: grayscale(75%); Apply grayscale effect */
+
+   background-repeat: no-repeat;
+}
+
+.cards_1 .green {
+  background-image:url('p3_2.png');
+  background-size: cover;
+}
+
+.cards_1 .car {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards_1 .car p.tip {
+  font-size: 1em;
+  font-family: 'Chilanka', cursive;
+  font-weight: 700;
+}
+
+.cards_1 .car p.second-text {
+  font-size: .8m;
+  font-family: 'Cookie', cursive;
+  padding-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.cards_1 .car:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards_1:hover > .car:not(:hover) {
+  filter: blur(1px) grayscale(25%);
+  
+  transform: scale(0.9, 0.9);
+}
+/*Projects section ends here*/
+/*Contact from*/
+#contact{
+    display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+                /* margin-bottom: 100px; */
+}
+.contact-form {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width:350px
+}
+
+.contact-form label {
+  color: white;
+}
+
+.contact-form .heading {
+  font-size: 24px;
+  color: white;
+  ;
+  margin-bottom: 12px;
+  font-weight: bold;
+  display: block;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+  width: 330px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(78, 77, 77);
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-form button[type="submit"] {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  transform: scale(1.09);
+  transition: transform 0.3s ease-in-out;
+}
+
+</style>
+</head>
+<body>
+
+    <section id="Home">
+        <div class="Home">
+            <div class="profile-picture">
+                <img src="about-pic.png" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h1>Sahil Channa</h1>
+                <p>Capable in Java and Python<br>
+                • Comprehensive knowledge of DSA.<br>
+                • Capable of handling challenging issues.<br>
+                • Aids in the completion of the project.<br>
+                • Looking for a dynamic setting where skills can be developed.<br>
+                <br>
+                </p>
+                <div class="resume-buttons">
+                    <a href="https://drive.google.com/file/d/1mzbHAxiKtgwQyPkYQyJ6sZA_4b6fD064/view?usp=drive_link" class="menu__link">Resume</a>
+                </div>
+                <div class="home-social">
+                    <a href="https://ig.me/saxilll_" target="https://ig.me/saxilll_"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/saxil" target="https://github.com/saxil"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sahil-channa-71893b27a/" target=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/saxillll_" target="https://x.com/saxillll_"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <!-- Skills card placed in the new section -->
+        <div class="card">
+            <div class="title">My Skills</div>
+            <div class="body">
+                <div class="skill">
+                    <div class="skill-name python">Python</div>
+                    <div class="skill-level">
+                        <div style="width: 75%" class="skill-percent"></div>
+                    </div>
+                    <div class="skill-percent-number">75%</div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-name sql">SQL</div>
+                    <div class="skill-level">
+                        <div style="width: 80%" class="skill-percent"></div>
+                    </div>
+                    <div class="skill-percent-number">80%</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name mong-db">Mongo-Db</div>
+                    <div class="skill-level">
+                        <div style="width: 75%" class="skill-percent"></div>
+                    </div>
+                    <div class="skill-percent-number">75%</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name java">Java</div>
+                    <div class="skill-level">
+                        <div style="width: 50%" class="skill-percent"></div>
+                    </div>
+                    <div class="skill-percent-number">50%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects"></section>
+        <!-- <h2>My Projects</h2> -->
+        <div class="Project">  
+           
+            <div class="cards_1">
+                <div class="car red">
+                    <p class="tip">Hand Written Digit Recognition</p>
+                    <p class="second-text">Hand-written Digit is recognised by ML Algorithms like linear Reggression, KNN, SVM. The dataset is taken from Kaggle.</p>
+                </div>
+                <div class="car blue">
+                    <p class="tip">Heart Disease Detection</p>
+                    <p class="second-text">Heart Disease Prediction is done by using ML Algorithms like PCA , Random Forest Classifier. The dataset is taken from Kaggle.</p>
+                </div>
+                <div class="car green">
+                    <p class="tip">House Price Prediction</p>
+                    <p class="second-text">House Price Prediction is done by ML Algorithms like Linear Regression, Decision Tree, Random Forest. The dataset is taken from Kaggle</p>
+                </div>
+            </div>
+
+</div>
+    </section>
+    
+    <section id="contact">
+     
+        <div class="contact-form">
+            <span class="heading">Contact Us</span>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" required="">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required="">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required=""></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
+          
+    <footer>
+            <div class="social-links">
+                <a href="https://ig.me/saxilll_" target="https://ig.me/saxilll_"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/saxil" target="https://github.com/saxil"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-channa-71893b27a/" target=""><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/saxillll_" target="https://x.com/saxillll_"><i class="fab fa-twitter"></i></a>
+            </div>
+        <p>&copy; 2024 Your Company, Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

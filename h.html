@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Banner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            
+        }
+        .banner {
+            width: 100%;
+            height: 250px;
+            background-image: url('pankaj-patel.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            position: absolute;
+            bottom: -50px;
+            left: 20px;
+        }
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+        }
+        .profile-details {
+            margin-left: 140px;
+            padding: 20px;
+            padding-top: 70px;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            background-color: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="PP.jpeg" alt="Profile Picture">
+        </div>
+    </div>
+    <div class="profile-details">
+        <p class="profile-name">Ricardo Cooper</p>
+        <div class="buttons">
+            <button>Message</button>
+            <button>Call</button>
+        </div>
+    </div>
+</body>
+</html>
